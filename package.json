@@ -1,7 +1,7 @@
 {
   "name": "cypresse2erecap",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo application details: The test automation framework was developed for this [demo bank application](https://parabank.parasoft.com/parabank/index.htm). One can login to the demo version using crenetials ``` login: john/demo ```",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +20,8 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
-    "cypress": "^12.11.0"
+    "cypress": "^9.7.0",
+    "typescript": "^5.1.3"
   },
   "dependencies": {
     "cypress-cucumber-preprocessor": "^4.1.2",
