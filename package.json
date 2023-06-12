@@ -20,6 +20,7 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
+    "@types/node": "^20.2.5",
     "cypress": "^9.7.0",
     "typescript": "^5.1.3"
   },
