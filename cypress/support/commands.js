@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+/// <reference types="Cypress" />
+
+
+Cypress.Commands.add('pageValidation', (webPage) => {
+    switch(webPage){
+        case "userLogin":
+            cy.url().should('include', Cypress.env('loginPage_url'));
+            break;       
+        case "overview": 
+            cy.url().should('include', Cypress.env('overview_url'));
+            break;
+        default:
+            console.log("The requested web page is not available");
+    }
+})
