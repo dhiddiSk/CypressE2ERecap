@@ -1,1 +1,7 @@
-{}
+{
+"baseUrl" : "https://parabank.parasoft.com/parabank/index.htm",
+"env": {
+    "loginPage_url": "/index.htm",
+    "overview_url": "/overview.htm"
+  }
+}
