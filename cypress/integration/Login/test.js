@@ -18,7 +18,7 @@ When(/^I enter invalid credentials with userName as (.+) and (.+)$/, function (u
 });
 
 Given(/^I should be in the bank application \"([^\"]*)\" page$/, function (page) {
-  cy.visit("https://parabank.parasoft.com/parabank");
+  cy.visit("https://parabank.parasoft.com/parabank/index.htm");
   cy.pageValidation(page);
 });
   
