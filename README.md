@@ -1,3 +1,4 @@
-# DEMO BANK APPLICATION TESTAUTOMATION.
-Demo application details: The test automation framework was developed for this [demo bank application](https://parabank.parasoft.com/parabank/index.htm).
-One can login to the demo version using crenetials ``` login: john/demo ```
+# TESTAUTOMATION EXERCISE PROJECT ON SAMPLE WEBAPPLICATIONS.
+1. https://rahulshettyacademy.com/seleniumPractise/#/
+2. https://rahulshettyacademy.com/AutomationPractice/
+3. https://rahulshettyacademy.com/angularpractice/
