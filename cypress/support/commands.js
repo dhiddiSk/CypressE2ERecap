@@ -35,6 +35,9 @@ Cypress.Commands.add('pageValidation', (webPage) => {
         case "overview": 
             cy.url().should('include', Cypress.env('overview_url'));
             break;
+        case "ecommerceHomePage":
+            cy.url().should('include', Cypress.env('ecommerceLoginPage_url'));
+            break;
         default:
             console.log("The requested web page is not available");
     }
