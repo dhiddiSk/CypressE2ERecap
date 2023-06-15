@@ -38,5 +38,28 @@ Then(
 
 Then(
   /^I check if all the products are displayed correctly with correct price tags.$/,
-  function () {}
-);
+  function () {
+
+    cy.fixture("data.json").then((testDataSetFixture) => {
+
+      let itemIndex = 0;
+      for(const item of Object.values(testDataSetFixture.productsAndPrices)){
+        let productPrice = '';
+        let itemsTextWithPrice = '';
+        cy.get(".product .product-name").eq(itemIndex).then($value => {
+            itemsTextWithPrice = ($value.text().split("-"));
+            productPrice = itemsTextWithPrice[1].trim();
+            expect(item).equals(productPrice);
+        })
+        itemIndex +=1;
+    }
+  });
+
+  Then(/^I type the valid (.+) in the search bar.$/, function (productName) {
+    cy.get('.search-keyword').type(productName);
+  });
+  
+  Then(/^I validate if that entered (.+) is displayed in the webpage.$/, function (productName) {
+    cy.get('.product .product-name').contains(productName);
+  });
+});
