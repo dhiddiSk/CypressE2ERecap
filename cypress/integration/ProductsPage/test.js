@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+import { Console } from "console";
 import {
   Given,
   When,
@@ -20,18 +21,17 @@ Then(
   function () {
     cy.fixture("data.json").then((testDataSetFixture) => {
 
-        let testBasisDataObject = testDataSetFixture.productsAndPrices;
-        console.log(typeof(testBasisDataObject));
-      for(const item of Object.values(testBasisDataObject)){
-          console.log(item);
+        let itemIndex = 0;
+        for(const item of Object.keys(testDataSetFixture.productsAndPrices)){
+          let productName = '';
+          let itemsTextWithPrice = '';
+          cy.get(".product .product-name").eq(itemIndex).then($value => {
+              itemsTextWithPrice = ($value.text().split("-"));
+              productName = itemsTextWithPrice[0].trim();
+              expect(item).equals(productName);
+          })
+          itemIndex +=1;
       }
-      
-      // cy.get(".product .product-name").each(($el, index, $list) => {
-      //        cy.get($el).then($value => {
-      //         let itemsText = $value.text();
-      //         console.log(itemsText);
-      //        })
-      // });
     });
   }
 );
