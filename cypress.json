@@ -1,6 +1,7 @@
 {
 "env": {
     "loginPage_url": "/index.htm",
-    "overview_url": "/overview.htm"
+    "overview_url": "/overview.htm",
+    "ecommerceLoginPage_url": "/seleniumPractise/#/"
   }
 }
