@@ -1,5 +1,4 @@
 /// <reference types="Cypress" />
-import { Console } from "console";
 import {
   Given,
   When,
