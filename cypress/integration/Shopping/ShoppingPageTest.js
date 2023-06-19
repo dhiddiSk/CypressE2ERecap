@@ -10,7 +10,7 @@ Given(
   /^I should be in the ecommerce application \"([^\"]*)\" page.$/,
   function (webPage) {
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
-    cy.pageValidation("ecommerceHomePage");
+    cy.pageValidation(webPage);
   }
 );
 
