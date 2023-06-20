@@ -40,6 +40,9 @@ Cypress.Commands.add('pageValidation', (webPage) => {
             break;
         case "practicePage":
             cy.url().should('include', Cypress.env('practicePage_url'));
+        
+        case "mobileShopHomePage":
+            cy.url().should('include', Cypress.env('mobileShopHomePage_url'));
         default:
             console.log("The requested web page is not available");
     }

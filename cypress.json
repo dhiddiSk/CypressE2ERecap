@@ -3,6 +3,7 @@
     "loginPage_url": "/index.htm",
     "overview_url": "/overview.htm",
     "ecommerceLoginPage_url": "/seleniumPractise/#/",
-    "practicePage_url": "/AutomationPractice/"
+    "practicePage_url": "/AutomationPractice/",
+    "mobileShopHomePage_url": "angularpractice/shop"
   }
 }
